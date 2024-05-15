@@ -1,0 +1,99 @@
+/* AcademyCarousel.css */
+.academy__container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden; 
+    background-color: #38B8FC; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.academy__container h2 {
+    margin: 0 0 20px 0;
+    color: white;
+}
+
+.academyCarousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.academyCarouselHeading{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 15px;
+}
+.academyCarousel__items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.academyCarousel__item {
+    width: 20%; 
+    margin-right: 1%; 
+    background-color: lightgray;
+    border-radius: 10px;
+    flex: 0 0 auto;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.academyCarousel__image {
+    width: 100%; 
+    height: auto; 
+    max-height: 150px;
+    border-radius: 10px;
+    object-fit: cover; 
+    margin-bottom: 10px;
+}
+
+.academyCarousel__text {
+    flex: 1; 
+}
+
+.academyCarouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #F6B825; 
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.academyCarouselButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.academyCarouselButton:nth-child(3) {
+    left: 10px;
+}
+
+.academyCarouselButton:nth-child(4) {
+    right: 10px;
+}
+@media (max-width: 1024px) {
+    .academyCarousel__item {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .academyCarousel__item {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 480px) {
+    .academyCarousel__item {
+        width: 50%;
+    }
+}

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.navbar__content {
+    background-color: #70C4F3;
+    color: white;
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    justify-content: flex-end;
+}
+
+.navbar__items {
+    display: flex;
+    margin-right: 25px;
+    gap: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.25rem;
+}

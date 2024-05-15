@@ -1,0 +1,51 @@
+/* SubscribeSection.css */
+.subscribe__container {
+    background-color: #F6B825; 
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe__container h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subscribe__container p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.subscribe__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe__input {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.subscribe__button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #38B8FC; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe__button:hover {
+    background-color: #309ad6; 
+}
