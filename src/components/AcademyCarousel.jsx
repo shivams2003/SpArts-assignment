@@ -7,7 +7,7 @@ function AcademyCarousel() {
     const [itemsPerView, setItemsPerView] = useState(5);
 
     useEffect(() => {
-        fetch('/api/academies')
+        fetch('https://sparts-backend-production.up.railway.app/api/academies')
             .then(response => response.json())
             .then(data => setAcademies(data))
             .catch(error => console.error('Error fetching data:', error));
