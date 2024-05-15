@@ -1,7 +1,14 @@
 import express from 'express';
 import cors from 'cors';
+import { join } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
 const app = express();
 const port = process.env.PORT || 3000;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 app.use(cors());
 app.use(express.json());
@@ -80,11 +87,15 @@ const academies = [
     }
 ];
 
-// Routes
-app.get('/api/academies', (req, res) => {
-    res.json(academies);
+
+app.use(express.static(join(__dirname, '../../dist')));
+
+app.get('*', (req, res) => {
+    res.sendFile(join(__dirname, '../../dist', 'index.html'));
 });
 
 app.listen(port, () => {
     console.log(`Mock API server running at http://localhost:${port}`);
 });
+
+export default app;
