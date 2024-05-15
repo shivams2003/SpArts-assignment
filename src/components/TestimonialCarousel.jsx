@@ -7,7 +7,7 @@ function TestimonialCarousel() {
     const [itemsPerView, setItemsPerView] = useState(5);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/academies')
+        fetch('/api/academies')
             .then(response => response.json())
             .then(data => setAcademies(data))
             .catch(error => console.error('Error fetching data:', error));
